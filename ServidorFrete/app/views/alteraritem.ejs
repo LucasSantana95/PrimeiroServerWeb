@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Alterar Item</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+    <body>
+        <form method="post">
+            <h1>Alterar Livro</h1>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" readonly value="<%= Livro._id %>">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" value="<%= Livro.nome %>">
+            <label for="autor">autor:</label>
+            <input type="text" id="autor" name="autor" value="<%= Livro.autor %>">
+            <input type="submit" id="btnAlterar" name="Alterar" value="Alterar">
+        </form> 
+    </body>
+</html>
+
