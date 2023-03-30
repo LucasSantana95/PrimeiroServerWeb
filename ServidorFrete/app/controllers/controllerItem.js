@@ -6,11 +6,16 @@ module.exports = {
             res.render('../views/item.ejs',{livros});
         })
     },
+    getById: (req,res) => {
+        modelItens.findById(req.params.id).sort('autor').then((livros)=>{
+            res.render('../views/item.ejs',{livros});
+        })
+    },
     additens: (req,res) => {
         res.render('additens.ejs');
         
     },
-    additenspost: (req,res) => {
+    post: (req,res) => {
         if(req.body.nome != "" || req.body.nome != undefined || req.body.autor != "" || req.body.autor != undefined){
             var livro = new modelItens({nome: req.body.nome, autor: req.body.autor});
             livro.save();
