@@ -26,6 +26,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/test").then(() => {
     app.use(rotaFrete);
     app.use(rotaItem);
     
-    app.listen(3000);
+    app.listen(3001);
     
     console.log('Servidor rodando em http://localhost:3000/');
